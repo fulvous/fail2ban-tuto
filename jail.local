@@ -1,0 +1,16 @@
+[DEFAULT]
+bantime = 5m
+findtime = 2m
+maxretry = 5
+
+#OPCIONAL
+destemail = root@localhost
+sender = fail2ban@debian10test
+mta = mail
+
+[sshd]
+enable = true
+port = ssh
+logpath = %(sshd_log)s
+backend = %(sshd_backend)s
+
